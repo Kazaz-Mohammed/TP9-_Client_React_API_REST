@@ -1,70 +1,331 @@
-# Getting Started with Create React App
+# 🏦 Compte Client - Bank Account Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.7-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![H2 Database](https://img.shields.io/badge/H2-Database-4479A1?style=for-the-badge&logo=h2&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-In the project directory, you can run:
+A modern full-stack web application for managing bank accounts (Comptes Bancaires) with a React frontend and Spring Boot REST API backend.
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Table of Contents
 
-### `npm test`
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Screenshots](#-screenshots)
+- [Installation & Setup](#-installation--setup)
+- [Project Structure](#-project-structure)
+- [API Endpoints](#-api-endpoints)
+- [Usage](#-usage)
+- [Configuration](#-configuration)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎯 Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Compte Client** is a comprehensive bank account management application that allows users to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ✅ **Create** new bank accounts with balance, creation date, and account type
+- 📊 **View** all accounts in a structured table format
+- 🔄 **Update** existing account information
+- 🗑️ **Delete** accounts from the system
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application follows a modern architecture with a **React** frontend communicating with a **Spring Boot REST API** backend, storing data in an **H2 in-memory database**.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ✨ Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend (React)
+- 🎨 Modern, responsive UI with Bootstrap 5
+- 📱 Mobile-friendly interface
+- 🔄 Real-time data fetching and updates
+- ✅ Form validation and error handling
+- 🌐 CORS-enabled API communication
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend (Spring Boot)
+- 🚀 RESTful API with JSON and XML support
+- 💾 JPA/Hibernate ORM for database operations
+- 🗄️ H2 in-memory database
+- 🔒 CORS configuration for cross-origin requests
+- 📝 Full CRUD operations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React** | 19.2.0 | UI Framework |
+| **Axios** | 1.13.1 | HTTP Client |
+| **Bootstrap** | 5.3.8 | CSS Framework |
+| **React Scripts** | 5.0.1 | Build Tools |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Backend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Spring Boot** | 3.5.7 | Backend Framework |
+| **Spring Data JPA** | - | Database Operations |
+| **H2 Database** | - | In-Memory Database |
+| **Jackson** | - | JSON/XML Serialization |
+| **Lombok** | - | Code Generation |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📸 Screenshots
 
-### Analyzing the Bundle Size
+### 1. Application Interface - Account List View
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Application Interface](Capture%20d'écran%20(951).png)
 
-### Making a Progressive Web App
+*The main application interface showing the account list with multiple accounts displayed in a table format.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. Success Notification - Account Added
 
-### Advanced Configuration
+![Success Notification](Capture%20d'écran%20(952).png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*Confirmation popup displayed when a new account is successfully created, showing "Compte ajouté" (Account added) message.*
 
-### Deployment
+### 3. Database Console - H2 Database Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![H2 Console](Capture%20d'écran%20(953).png)
 
-### `npm run build` fails to minify
+*H2 Console interface displaying the database records, showing the stored account data with ID, balance, creation date, and account type.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+
+- **Node.js** (v14 or higher)
+- **Java JDK** (v25 or compatible)
+- **Maven** (v3.6 or higher)
+- **npm** or **yarn**
+
+### Backend Setup (Spring Boot)
+
+1. **Navigate to the Spring Boot project:**
+   ```bash
+   cd spring
+   ```
+
+2. **Build the project:**
+   ```bash
+   mvn clean install
+   ```
+
+3. **Run the Spring Boot application:**
+   ```bash
+   mvn spring-boot:run
+   ```
+
+   The backend server will start on **http://localhost:8082**
+
+4. **Access H2 Console:**
+   - URL: `http://localhost:8082/h2-console`
+   - JDBC URL: `jdbc:h2:mem:banque`
+   - Username: `sa`
+   - Password: (leave empty)
+
+### Frontend Setup (React)
+
+1. **Navigate to the React client:**
+   ```bash
+   cd compte-client
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
+
+   The application will open at **http://localhost:3000**
+
+### Configuration
+
+Make sure the API base URL in `src/config.js` matches your backend:
+
+```javascript
+const API_BASE_URL = "http://localhost:8082/banque";
+```
+
+---
+
+## 📁 Project Structure
+
+```
+compte-client/
+├── public/                 # Public assets
+├── src/
+│   ├── components/         # React components
+│   │   ├── CompteForm.js   # Account creation form
+│   │   └── CompteList.js   # Account list display
+│   ├── config.js           # API configuration
+│   ├── App.js              # Main app component
+│   └── index.js            # Entry point
+└── package.json            # Dependencies
+
+spring/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── ma/rest/spring/
+│   │   │       ├── controllers/    # REST controllers
+│   │   │       ├── entities/      # JPA entities
+│   │   │       └── repositories/   # Data repositories
+│   │   └── resources/
+│   │       └── application.properties  # Configuration
+└── pom.xml                 # Maven dependencies
+```
+
+---
+
+## 🔌 API Endpoints
+
+The backend provides a RESTful API at base path `/banque`:
+
+| Method | Endpoint | Description | Content-Type |
+|--------|----------|-------------|--------------|
+| `GET` | `/banque/comptes` | Get all accounts | JSON/XML |
+| `GET` | `/banque/comptes/{id}` | Get account by ID | JSON/XML |
+| `POST` | `/banque/comptes` | Create new account | JSON/XML |
+| `PUT` | `/banque/comptes/{id}` | Update account | JSON/XML |
+| `DELETE` | `/banque/comptes/{id}` | Delete account | - |
+
+### Example API Request
+
+**Create Account:**
+```bash
+POST http://localhost:8082/banque/comptes
+Content-Type: application/json
+
+{
+  "solde": 300,
+  "dateCreation": "2025-10-30",
+  "type": "EPARGNE"
+}
+```
+
+**Response:**
+```json
+{
+  "id": 4,
+  "solde": 300,
+  "dateCreation": "2025-10-30",
+  "type": "EPARGNE"
+}
+```
+
+---
+
+## 💻 Usage
+
+### Adding a New Account
+
+1. Fill in the form fields:
+   - **Solde**: Enter the account balance (number)
+   - **Date de Création**: Select the creation date
+   - **Type**: Choose between:
+     - `COURANT` (Current Account)
+     - `EPARGNE` (Savings Account)
+
+2. Click the **"Ajouter"** button
+
+3. A success message will appear confirming the account creation
+
+4. The account list will automatically refresh to show the new account
+
+### Viewing Accounts
+
+- All accounts are automatically displayed in the table below the form
+- The table shows:
+  - **ID**: Unique account identifier
+  - **Solde**: Account balance
+  - **Date de Création**: Account creation date
+  - **Type**: Account type (COURANT or EPARGNE)
+
+---
+
+## ⚙️ Configuration
+
+### Backend Configuration
+
+**`spring/src/main/resources/application.properties`:**
+
+```properties
+spring.application.name=spring
+spring.datasource.url=jdbc:h2:mem:banque
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+server.port=8082
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### Frontend Configuration
+
+**`compte-client/src/config.js`:**
+
+```javascript
+const API_BASE_URL = "http://localhost:8082/banque";
+export default API_BASE_URL;
+```
+
+### CORS Configuration
+
+The backend includes CORS configuration to allow requests from the React frontend:
+
+```java
+@CrossOrigin(origins = "http://localhost:3000")
+@RestController
+@RequestMapping("/banque")
+public class CompteController {
+    // ...
+}
+```
+
+---
+
+## 🎓 Learning Resources
+
+- [React Documentation](https://react.dev/)
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Bootstrap Documentation](https://getbootstrap.com/)
+- [Axios Documentation](https://axios-http.com/)
+
+---
+
+## 📝 License
+
+This project is part of an educational exercise (TP 9 : Client React pour API REST - Spring Boot).
+
+---
+
+## 👨‍💻 Author
+
+Kazaz Mohammed
+Developed as part of the Spring Boot REST API course.
+
+---
+
+<div align="center">
+
+**Made with ❤️ using React and Spring Boot**
+
+</div>
