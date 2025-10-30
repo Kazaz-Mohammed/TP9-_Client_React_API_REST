@@ -83,19 +83,19 @@ The application follows a modern architecture with a **React** frontend communic
 
 ### 1. Application Interface - Account List View
 
-![Application Interface](Capture%20d'écran%20(951).png)
+![Application Interface](./images/screenshot-01-app-interface.png)
 
 *The main application interface showing the account list with multiple accounts displayed in a table format.*
 
 ### 2. Success Notification - Account Added
 
-![Success Notification](Capture%20d'écran%20(952).png)
+![Success Notification](./images/screenshot-02-success-notification.png)
 
 *Confirmation popup displayed when a new account is successfully created, showing "Compte ajouté" (Account added) message.*
 
 ### 3. Database Console - H2 Database Management
 
-![H2 Console](Capture%20d'écran%20(953).png)
+![H2 Console](./images/screenshot-03-h2-console.png)
 
 *H2 Console interface displaying the database records, showing the stored account data with ID, balance, creation date, and account type.*
 
